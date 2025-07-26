@@ -1,0 +1,14 @@
+name: robotics  # 统一环境名
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - matplotlib
+  - pandas
+  - scipy
+  - jupyter
+  - scikit-learn
+  # 平台特定的依赖通过前缀解决
+  - libblas=*=*openblas*  [osx]   # Mac专用
+  - ucrt=10.0.22621       [win]   # Windows专用
